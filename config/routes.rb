@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  root 'posts#index'
+
+  get 'chapters/index'
+
+  get 'chapters/new'
+
+  get 'chapters/show'
+
+  # get 'stories/new'
+
+  # get 'stories/delete'
+
+  # get 'stories/index'
+
+  resources :stories
+  resources :posts
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,20 @@
+
+<h1> New story </h1>
+<%= form_for @story do |f| %>
+  <%= f.label :title %>: 
+  <%= f.text_field :title %>
+
+  <%= f.label :date__of_story_begining  %> 
+  <%= f.date_field :date%>
+
+  <%= f.label :url_optional_if_chaptered_story %>
+  <%= f.text_field :url %>
+
+  <%= f.submit %>
+<% end %>
+
+<p>use this form to upload stories to your site.
+  
+  to get the story URl got to google docs,file,publish to web, and then select the embeded option.
+
+  the date will never be shown to readers, it is used soley to order stories by timeline.</p>

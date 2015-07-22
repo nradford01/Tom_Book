@@ -1,0 +1,5 @@
+<h1><%=@chapter.title%></h1>
+<%= render @chapter.url%>
+<%=link_to "previous chapter" chapter_path(@chapter.id-1)
+<%=link_to "next chapter" chapter_path(@chapter.id+1)
+
