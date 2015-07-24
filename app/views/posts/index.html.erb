@@ -1,15 +1,17 @@
-<h1> Alurianen News </h1>
-<%= link_to 'Add New News Item', new_post_path %>
-<div class=".col-md-3">
+<div class="container">
+  <h1 class='text-center'> Alurianen News </h1>
+  <% if  admin_signed_in? %>
+    <p class='text-center'><%= link_to 'Add New News Item', new_post_path, class: 'btn btn-success' %></p>
+  <% end %>
+  <div>
+    <% @posts.each do |post| %>
+      <h2><%= post.title %></h2>
+      <p><%= post.body %></p>
+      <% if admin_signed_in? %>
+        <%= link_to 'Edit news item', edit_post_path(post), class: 'btn btn-warning' %>
+        <%= link_to 'Destroy news item', post, method: :delete, class: 'btn btn-danger' %>  
+      <% end %>
+    <% end %>
   </div>
-<div class="jumbotron" class=".col-md-6">
-<% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
-  <p><%= post.body %></p>
-  <%= link_to 'Edit news item', edit_post_path(post) %>
-<%= link_to 'Destroy news item', post, method: :delete %>  
-<% end %>
 </div>
-<div class=".col-md-3">
-  </div>
 
