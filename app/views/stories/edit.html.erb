@@ -1,14 +1,13 @@
-<h1> New Chapter </h1>
-<%= form_for @chapter do |f| %>
+<h1> Editstory </h1>
+<%= form_for @story do |f| %>
   <%= f.label :title %>: 
   <%= f.text_field :title %>
 
-  <%= f.label :chapter_number  %> 
-  <%= f.date_field :number%>
+  <%= f.label :date_of_story_begining  %> 
+  <%= f.number_field :Order%>
 
   <%= f.label :url_optional_if_chaptered_story %>
   <%= f.text_field :url %>
 
   <%= f.submit %>
 <% end %>
-

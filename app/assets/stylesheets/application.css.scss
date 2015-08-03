@@ -1,11 +1,115 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
  
 body {
   /*background:#EAE7E5;*/
   color: #3E363C;
+  font-size: 16px;
+  background-color: #f2efe4;
+  padding-bottom: 80px;
 }
 
 a {
   color: #6500A4;
 }
+
+h1{
+  font-size: 44px;
+}
+
+p{
+  font-family: 'Fanwood Text', serif;
+  color: #544d35;
+}
+
+h1, h2, h3, #bs-example-navbar-collapse-1, .footertxt{
+  font-family: 'Smythe', cursive;
+}
+
+/*h1{
+    color: #1d442d;
+}*/
+h1,h2,h3{
+  color: #52175b;
+}
+
+.navbar{
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #1d442d;
+  #bs-example-navbar-collapse-1{
+  background: none;
+  a{
+    color: #c7debf;
+    font-size: 20px;
+  }
+  .navbar-nav{
+    float: right;
+  }
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: #52175b;
+}
+}
+
+//homepage only
+.map img{
+  width: 60%;
+  margin: 60px 20%;
+  border: solid 2px #333;
+}
+
+.readUs{
+  text-align: center;
+  .btn, .btn-lg{
+    font-family: 'Fanwood Text', serif;
+    text-decoration: none;
+  }
+}
+//end homepage
+
+//stories page
+ .text-center a{
+  white-space: nowrap;
+    color: #52175b;
+}
+
+.foriframe{
+  margin-left: 14%;
+}
+//end stories page
+
+//footer
+/*.footer{
+    background-color: #1d442d;
+    margin-top: 80px;
+    height: 50px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+  .footertxt{
+    float: left;
+    margin-left: 40px;
+    a{
+    color: #c7debf;
+    font-size: 20px;
+    text-decoration: none;
+    }
+    li > a:hover, li > a:focus {
+    background-color: #52175b;
+}
+  }
+}*/
+
+@media screen and (max-width: 1024px){
+  .map img{
+  width: 90%;
+  padding: 40px 0px;
+  margin: 0px 5%;
+}
+}
+
+

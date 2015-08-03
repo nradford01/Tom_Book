@@ -4,9 +4,17 @@
     <p class='text-center'><%= link_to 'Add New News Item', new_post_path, class: 'btn btn-success' %></p>
   <% end %>
   <div>
+    <div class="map">
+      <%= image_tag("CrosmosMapCopy.jpg") %>
+    </div>
+    <div class="readUs">
+      <%= link_to 'Stories', stories_path, class: 'btn-lg btn-warning' %>
+    </div>
     <% @posts.each do |post| %>
       <h2><%= post.title %></h2>
       <p><%= post.body %></p>
+       <p><%= post.created_at %></p>
+
       <% if admin_signed_in? %>
         <%= link_to 'Edit news item', edit_post_path(post), class: 'btn btn-warning' %>
         <%= link_to 'Destroy news item', post, method: :delete, class: 'btn btn-danger' %>  
