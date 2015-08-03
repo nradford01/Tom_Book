@@ -44,5 +44,5 @@ end
     params.require(:chapter).permit(:title, :number, :url)
   end
 
-end
+
 end
